@@ -4,7 +4,7 @@ A CLI based scripts library to interact with JIRA API. Not all actions are
 implemented in JIRA UI, therefore, we have created this library with custom
 logic and custom functionality that can be used by anyone.
 
-#### Description
+### Description
 
 Sometimes it is more convenient and straight-forward to do stuff via CLI
 rather than via UI. Also, the JIRA UI can not support every single functionality
@@ -12,32 +12,32 @@ possible, therefore, for custom logic and custom commands we have developed
 this CLI based library. Scroll down to see what are the available custom
 logic commands.
 
-#### Remarks
+### Remarks
 
 [Biomapas](https://biomapas.com) aims to modernise life-science 
 industry by sharing its IT knowledge with other companies and 
 the community. This is an open source library intended to be used 
 by anyone. Improvements and pull requests are welcome.
 
-#### Related technology
+### Related technology
 
 - Python 3
 - JIRA
 - JIRA Python SDK
 
-#### Assumptions
+### Assumptions
 
 The project assumes the following:
 
 - You have basic knowledge in JIRA software.
 
-#### Useful sources
+### Useful sources
 
 - Since this library uses JIRA SDK, it is a good idea to familiarize
 yourself with it:<br>
 https://github.com/pycontribs/jira.
 
-#### Install
+### Install
 
 The project is built and uploaded to PyPi. Install it by using pip.
 
@@ -51,7 +51,11 @@ Or directly install it through source.
 pip install .
 ```
 
-#### Usage & Examples
+### Usage & Examples
+
+This section shows what are the available commands and how to use them.
+
+#### Credentials management
 
 The library has a flexible credentials management.
 
@@ -91,11 +95,37 @@ Password: ...
 Server: ...
 ```
 
+#### Commands
+
 The library exposes CLI commands:
 
 ---
 
-- ***jira.sprints.storypoints***<br>
+##### jira
+
+Use this command to see what are available different commands and sections.
+```
+(venv) > jira
+
+Available sections:
+- sprints
+```
+
+---
+
+##### jira.sprints
+
+Use this command to see what are available different commands and sections in sprints section.
+```
+(venv) > jira
+
+Available commands:
+- storypoints
+```
+
+---
+
+##### jira.sprints.storypoints
 
 Use this command to calculate story points for each assignee in any sprint. For example:
 ```
@@ -110,7 +140,7 @@ Board number[Default 1]:
 
 > ENTER
 
-Select a sprint (1-7):
+Select a sprint (1-2):
 
 1. TEST Sprint 1
 2. TEST Sprint 2
@@ -126,6 +156,8 @@ Dev 2   : Total:  61 | Completed:  21( 34.4%) | Not completed:  40( 65.6%).
 
 ----------------------------------------------------------------
 ```
+
+---
 
 #### Testing
 

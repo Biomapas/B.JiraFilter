@@ -8,7 +8,7 @@ with open('HISTORY.md') as history_file:
 
 setup(
     name='b_jira_filter',
-    version='0.0.2',
+    version='0.0.3',
     license='Apache License 2.0',
     packages=find_packages(exclude=[
         # Exclude virtual environment.
@@ -18,7 +18,9 @@ setup(
     ]),
     entry_points={
         'console_scripts': [
-            'jira.sprints.storypoints=b_jira_filter.commands.sprint_story_points:sprint_story_points'
+            'jira=b_jira_filter.commands.jira.main:main',
+            'jira.sprints=b_jira_filter.commands.jira.sprints.main:main',
+            'jira.sprints.storypoints=b_jira_filter.commands.jira.sprints.storypoints:main',
         ],
     },
     description='Script library to interact with JIRA API.',

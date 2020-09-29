@@ -5,7 +5,7 @@ from b_jira_filter.objects.credentials import Credentials
 from b_jira_filter.objects.sprint_assignees import SprintAssignees
 
 
-def sprint_story_points() -> None:
+def main() -> None:
     """
     Command that creates a story points report for a specific sprint.
 
