@@ -1,5 +1,8 @@
 # Release history
 
+### 0.0.4
+* Add CI/CD.
+
 ### 0.0.3
 * Restructure commands directory.
 * Add entry points for every section e.g. `jira`, `jira.sprints`, and `jira.sprints.storypoints`.

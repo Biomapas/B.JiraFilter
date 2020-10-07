@@ -6,9 +6,13 @@ with open('README.md') as file:
 with open('HISTORY.md') as history_file:
     HISTORY = history_file.read()
 
+with open('VERSION') as file:
+    VERSION = file.read()
+    VERSION = ''.join(VERSION.split())
+
 setup(
     name='b_jira_filter',
-    version='0.0.3',
+    version=VERSION,
     license='Apache License 2.0',
     packages=find_packages(exclude=[
         # Exclude virtual environment.
